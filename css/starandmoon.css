@@ -1,0 +1,56 @@
+body{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.starArea{
+				width: 100vw;
+				height: 100vh;
+				position: fixed;
+				background-image: linear-gradient(to bottom, #1b2947, #2b3152, #3b385d, #4c4067, #5d4771);
+				z-index: -99;
+			}
+			.moon{
+				position: absolute;
+				top: 20px;
+				right: 40px;
+				width: 60px;
+				height: 60px;
+				background-color: #ffeaa7;
+				border-radius: 50%;
+				box-shadow: 0 0 20px #ffeaa7;
+			}
+			.star{
+				position: absolute;
+				width: 0;
+				height: 0;
+				opacity: 0.2;
+				border: 2px solid transparent;
+				border-bottom: 4px solid #fff;
+				animation: blingbling 3s linear infinite;
+			}
+			.star::before{
+				content: "";
+				position: absolute;
+				top: 4px;
+				left: -2px;
+				border: 2px solid transparent;
+				border-top: 4px solid #fff;
+			}
+			@keyframes blingbling{
+				20%{
+					opacity: 0.2;
+				}
+				40%{
+					opacity: 0.5;
+				}
+				60%{
+					opacity: 1;
+				}
+				80%{
+					opacity: 0.5;
+				}
+				100%{
+					opacity: 0.2;
+				}
+			}
